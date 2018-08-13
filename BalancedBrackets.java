@@ -17,28 +17,28 @@ public class BalancedBrackets {
             if(s.length()> 0 && s.length()%2==0) {
                 stack = new char[s.length()];
                 for(int i =0; i<s.length();i++) {
-                    System.out.println(s.charAt(i) +"::: "+top);
+                    //System.out.println(s.charAt(i) +"::: "+top);
                     if(s.charAt(i) == '{') {
                         top++;
                         stack[top] = s.charAt(i);
-                        System.out.println(top+" curley add"+"  ::: "+stack[top]);
+                        //System.out.println(top+" curley add"+"  ::: "+stack[top]);
                     }
                     else if(s.charAt(i) == '(') {
                         top++;
 
                         stack[top] = s.charAt(i);
-                        System.out.println(top +" round add"+"  ::: "+stack[top]);
+                        ///System.out.println(top +" round add"+"  ::: "+stack[top]);
                     }
                     else if(s.charAt(i) == '[') {
                         top++;
                         
                         stack[top] = s.charAt(i);
-                        System.out.println(top +" sqaure add"+"  ::: "+stack[top]);
+                        ///System.out.println(top +" sqaure add"+"  ::: "+stack[top]);
                     }
                     else if(s.charAt(i) == ']') {
                         if(stack[top] == '[') {
                             top--;
-                            System.out.println(top+" sqaure pop"+"  ::: "+stack[top]);
+                            //System.out.println(top+" sqaure pop"+"  ::: "+stack[top]);
                             continue;
                         }
                         else {
@@ -49,7 +49,7 @@ public class BalancedBrackets {
                     else if(s.charAt(i) == ')') {
                         if(stack[top] == '(') {
                             top--;
-                            System.out.println(top+ " round pop"+"  ::: "+stack[top]);
+                            //System.out.println(top+ " round pop"+"  ::: "+stack[top]);
                             continue;
                         }
                         else {
@@ -74,7 +74,7 @@ public class BalancedBrackets {
                     //     break;
                     // }
                 }
-                System.out.println(top +" outside");
+                //System.out.println(top +" outside");
                 if(top == -1) {
                     result = "YES";
                 }
